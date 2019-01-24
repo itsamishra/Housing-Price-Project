@@ -23,3 +23,8 @@ def get_price():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# TODO: Add logging (look up "Python logging" on Youtube)
+# TODO: Convert prices for Vancouver and Toronto from CAD to USD, then RUN THOSE SCRIPTS AGAIN (TO UPDATE DATABASE)
+# TODO: Change model-> Make it so that Flask has access to a "pickled" model (locally), so that it doesn't have to make
+# TODO: (cont...) a SQL command on every reload of http://127.0.0.1:5000/api/price

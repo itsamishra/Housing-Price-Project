@@ -340,8 +340,3 @@ if __name__ == "__main__":
     print("Result:")
     print(lrm.predict_price("toronto", [9000, 4, 4]))
     # print(self.models["toronto"].predict([[9000, 4, 4]]))
-
-# TODO: Add this project to GitHub
-# TODO: Convert prices for Vancouver and Toronto from CAD to USD, then RUN THOSE SCRIPTS AGAIN (TO UPDATE DATABASE)
-# TODO: Add data source for each of 4 locations
-# TODO: Add logging (look up "Python logging" on Youtube)
