@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c4bfb9b-125d-4730-8077-cd19165f7d0a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Housing-Price-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Housing-Price-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Website/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/VanHouseAnalysis-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinRegModel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VanHouseAnalysis.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lin_reg_model_new_york_city.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lin_reg_model_san_francisco.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lin_reg_model_toronto.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lin_reg_model_vancouver.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanHomeData.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/website-server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Website/website-server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,6 +17,7 @@
     <SUITE FILE_PATH="coverage/Housing_Price_Project$model_server.coverage" NAME="model-server Coverage Results" MODIFIED="1548376178277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
     <SUITE FILE_PATH="coverage/Housing_Price_Project$LinRegModel.coverage" NAME="LinRegModel Coverage Results" MODIFIED="1548296187933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Housing_Price_Project$LinRegModel__1_.coverage" NAME="LinRegModel (1) Coverage Results" MODIFIED="1548371171833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
+    <SUITE FILE_PATH="coverage/Housing_Price_Project$website_server.coverage" NAME="website-server Coverage Results" MODIFIED="1548377707394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Website" />
     <SUITE FILE_PATH="coverage/Housing_Price_Project$server.coverage" NAME="server Coverage Results" MODIFIED="1548368568191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -47,8 +37,8 @@
       <file leaf-file-name="model-server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/model-server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="290">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -56,11 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="website-server.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="website-server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/website-server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="135">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Website/static/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -118,6 +120,7 @@
         <option value="$PROJECT_DIR$/client.py" />
         <option value="$PROJECT_DIR$/Model/model-server.py" />
         <option value="$PROJECT_DIR$/Website/website-server.py" />
+        <option value="$PROJECT_DIR$/Website/static/index.html" />
       </list>
     </option>
   </component>
@@ -158,6 +161,12 @@
               <item name="Housing-Price-Project" type="462c0819:PsiDirectoryNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Housing-Price-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Housing-Price-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -184,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.model-server">
+  <component name="RunManager" selected="Python.website-server">
     <configuration name="LinRegModel (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Housing-Price-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -261,14 +270,35 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="website-server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Housing-Price-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Website" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Website/website-server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.LinRegModel" />
       <item itemvalue="Python.server" />
       <item itemvalue="Python.model-server" />
       <item itemvalue="Python.LinRegModel (1)" />
+      <item itemvalue="Python.website-server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.website-server" />
         <item itemvalue="Python.model-server" />
         <item itemvalue="Python.LinRegModel (1)" />
         <item itemvalue="Python.server" />
@@ -339,6 +369,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -367,6 +400,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -395,6 +431,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -468,8 +507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/model-server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="290">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -478,8 +517,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Website/website-server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="135">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
