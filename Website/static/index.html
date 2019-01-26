@@ -6,8 +6,70 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-THIS IS A WEBPAGE
+
+<div class="container">
+  <div>
+      Square Footage: <input type="number" title="square_footage" id="square_footage" value="0"><br/>
+      Number of Bedrooms: <input type="number" title="num_bed" id="num_bed" value="0"><br/>
+      Number of Bathrooms: <input type="number" title="num_bath" id="num_bath" value="0"><br/>
+      <input type="submit" onclick="submit_button_click()"><br/>
+      <p id="result">Predicted Price:</p>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script>
+    // Handles "Submit" button click
+    function submit_button_click() {
+        let square_footage = $("#square_footage").val();
+        let num_bed = $("#num_bed").val();
+        let num_bath = $("#num_bath").val();
+
+        // Constructs GET request url
+        const url = "http://127.0.0.1:5000/api/prediction?square_footage="+square_footage+"&num_bed="+num_bed+"&num_bath="+num_bath;
+
+        // GET request to server
+        $.ajax({
+            url : url,
+            type : "get",
+            async: false,
+
+            // If GET request is successful, shows prediction on page
+            success : function(userStatus) {
+                let predicted_usd_price = userStatus["predicted_usd_price"];
+
+                let predict_string = $("#result").text();
+                predict_string = predict_string.substr(0, predict_string.indexOf(":")+1) + " " + predicted_usd_price;
+                console.log(predict_string);
+                $("#result").text(predict_string);
+            },
+            error: function() {
+                console.log("ERROR");
+            }
+        });
+
+    }
+</script>
 </body>
 </html>

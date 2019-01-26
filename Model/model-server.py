@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
 from LinRegModel import LinRegModel
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Initializes initial model
 lrm = LinRegModel()
