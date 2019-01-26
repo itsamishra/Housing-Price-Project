@@ -23,7 +23,8 @@ def get_prediction():
     square_footage = float(request.args.get('square_footage'))
     num_bed = float(request.args.get('num_bed'))
     num_bath = float(request.args.get('num_bath'))
-    predicted_usd_price = lrm.predict_price("toronto", [square_footage, num_bed, num_bath])[0]
+    location = str(request.args.get('location')).replace("-", " ")
+    predicted_usd_price = lrm.predict_price(location, [square_footage, num_bed, num_bath])[0]
 
     result = {"predicted_usd_price": predicted_usd_price}
 

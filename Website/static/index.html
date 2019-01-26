@@ -13,6 +13,7 @@
         html,
         body {
             height: 100%;
+            background-color: lightblue;
         }
         .container {
             height: 100%;
@@ -20,19 +21,42 @@
             justify-content: center;
             align-items: center;
         }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-  <div>
-      Square Footage: <input type="number" title="square_footage" id="square_footage" value="0"><br/>
-      Number of Bedrooms: <input type="number" title="num_bed" id="num_bed" value="0"><br/>
-      Number of Bathrooms: <input type="number" title="num_bath" id="num_bath" value="0"><br/>
-      <input type="submit" onclick="submit_button_click()"><br/>
-      <p id="result">Predicted Price:</p>
-  </div>
+<div class="container" id="set-params">
+    <form>
+        <div class="form-group">
+            <label>Square Footage</label>
+            <input type="number" class="form-control" id="square_footage" placeholder="e.g. 3000">
+        </div>
+        <div class="form-group">
+            <label>Number of Bedrooms</label>
+            <input type="number" class="form-control" id="num_bed" placeholder="e.g. 1">
+        </div>
+        <div class="form-group">
+            <label>Number of Bathrooms</label>
+            <input type="number" class="form-control" id="num_bath" placeholder="e.g. 2">
+        </div>
+        <div class="form-group">
+            <label>Location</label>
+            <select class="form-control" id="location">
+                <option>New York City</option>
+                <option>San Francisco</option>
+                <option>Toronto</option>
+                <option>Vancouver</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="submit_button_click()">Submit</button>
+    </form>
 </div>
+
+<div class="container" id="show-result" style="display:none">
+    <p id="query-result">123</p>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -45,9 +69,11 @@
         let square_footage = $("#square_footage").val();
         let num_bed = $("#num_bed").val();
         let num_bath = $("#num_bath").val();
+        let location = $("#location option:selected").text();
 
         // Constructs GET request url
-        const url = "http://127.0.0.1:5000/api/prediction?square_footage="+square_footage+"&num_bed="+num_bed+"&num_bath="+num_bath;
+        const url = "http://127.0.0.1:5000/api/prediction?square_footage="+square_footage+"&num_bed="+num_bed+"&num_bath="+num_bath+"&location="+location.split(' ').join('-').toLowerCase();
+        console.log(url);
 
         // GET request to server
         $.ajax({
@@ -59,11 +85,14 @@
             success : function(userStatus) {
                 let predicted_usd_price = userStatus["predicted_usd_price"];
 
-                let predict_string = $("#result").text();
-                predict_string = predict_string.substr(0, predict_string.indexOf(":")+1) + " " + predicted_usd_price;
-                console.log(predict_string);
-                $("#result").text(predict_string);
+                console.log("Predicted usd Price: " + predicted_usd_price);
+                console.log($("#location option:selected").text());
+
+                $("#query-result").text(predicted_usd_price);
+                $("#set-params").css("display", "none");
+                $("#show-result").css("display", "");
             },
+            // If GET request fails...
             error: function() {
                 console.log("ERROR");
             }
